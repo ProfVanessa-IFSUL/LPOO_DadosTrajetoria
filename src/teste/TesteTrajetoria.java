@@ -9,6 +9,8 @@ import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.Aspecto;
+import modelo.MedidaEuclideana;
+import modelo.MedidaManhattan;
 import modelo.Ponto;
 import modelo.PontoAspecto;
 import modelo.Tipo;
@@ -45,6 +47,12 @@ public class TesteTrajetoria {
             traj1.addPonto(p2);
 
             System.out.println("Ponto 1: " + p1.getTrajetoria());
+            
+            MedidaEuclideana dist = new MedidaEuclideana();
+            System.out.println("Distância Euclideana: "+dist.calcularDistancia(p1, p2));
+            
+            MedidaManhattan dist2 = new MedidaManhattan();
+            System.out.println("Distância Manhattan: "+dist2.calcularDistancia(p1, p2));
 
         } catch (ParseException ex) {
             System.out.println("Data inválida");

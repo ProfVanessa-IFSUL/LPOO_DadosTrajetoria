@@ -24,6 +24,12 @@ public class Trajetoria {
         return ID;
     }
 
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+    
+    
+
     public List<Ponto> getListaPontos() {
         return listaPontos;
     }
